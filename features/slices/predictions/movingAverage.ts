@@ -24,10 +24,7 @@ export const markerSlice = createSlice({
   }
 })
 
-export const {
-  visualizeMovingAverage,
-  inVisualizeMovingAverage,
-  setVisualizeMovingAverage
-} = markerSlice.actions
+export const { visualizeMovingAverage, inVisualizeMovingAverage, setVisualizeMovingAverage } =
+  markerSlice.actions
 
 export default markerSlice.reducer

@@ -24,7 +24,6 @@ export const markerSlice = createSlice({
   }
 })
 
-export const { visualizeMarker, inVisualizeMarker, setVisualizeMarker } =
-  markerSlice.actions
+export const { visualizeMarker, inVisualizeMarker, setVisualizeMarker } = markerSlice.actions
 
 export default markerSlice.reducer

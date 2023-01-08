@@ -2,4 +2,4 @@
 #if it not working you need run terminal 'chmod ug+x .husky/*' 
 "$(dirname -- "$0")/_/husky.sh"
 
-yarn lint && yarn prettier --write .
+yarn eslint . && yarn prettier --write .
