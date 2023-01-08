@@ -1,6 +1,4 @@
-import React, { Fragment, ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import { Fragment, ReactNode } from 'react'
 import Meta from './Meta'
 
 type Props = {
