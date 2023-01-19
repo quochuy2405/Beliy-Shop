@@ -4,15 +4,14 @@ const nextConfig = {
   swcMinify: true,
   typescript: {
     ignoreBuildErrors: true
-  }
-  ,
+  },
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+        protocol: 'https',
+        hostname: '**'
+      }
+    ]
   }
 }
 

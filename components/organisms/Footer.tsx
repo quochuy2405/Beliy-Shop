@@ -8,7 +8,7 @@ import { Button } from 'primereact/button'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-10 h-fit min-h-[40vh] flex justify-between gap-3 border-t-[3px] border-[#6A1212] w-[80%] mx-auto pt-6 font-semibold">
+    <footer className="mt-10 h-fit min-h-[40vh] flex justify-between gap-3 border-t-[3px] border-[#6A1212] w-[80%] mx-auto pt-6 font-semibold text-sm">
       <div className="flex-1">
         <div className="w-32 relative">
           <Image src={Logo} alt="BeliyShop" />
@@ -59,12 +59,12 @@ const Footer: React.FC = () => {
           <div className="flex">
             <InputText
               type="text"
-              className="p-inputtext-sm block mb-2 rounded-none"
+              className="p-inputtext-sm block mb-2 rounded-none h-11 w-64"
               placeholder="Email"
             />
 
             <Button
-              className="p-button-success p-button-sm rounded-none h-11 p-button-outlined"
+              className="p-button-success p-button-sm rounded-none h-11 p-button-outlined ml-1 w-36"
               label="ĐĂNG KÝ"
             />
           </div>
