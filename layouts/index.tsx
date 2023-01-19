@@ -1,5 +1,6 @@
+import Header from '@/components/organisms/Header'
 import { Fragment, ReactNode } from 'react'
-import Meta from './Meta'
+import Meta from './meta'
 
 type Props = {
   children?: ReactNode
@@ -9,6 +10,7 @@ type Props = {
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
   <Fragment>
     <Meta title={title} description="" />
+    <Header />
     {children}
   </Fragment>
 )

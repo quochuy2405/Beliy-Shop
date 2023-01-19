@@ -20,12 +20,19 @@ function Meta({ title, description, image = '../../assets/default-user.png' }: M
       <meta key="meta-twitter:title" property="twitter:title" content={title} />
       <meta key="meta-twitter:description" property="twitter:description" content={description} />
       <meta key="meta-twitter:image" property="twitter:image" content={image} />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet"
+        href="https://unpkg.com/primereact/resources/themes/lara-light-indigo/theme.css"
       />
+      <link rel="stylesheet" href="https://unpkg.com/primereact/resources/primereact.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/primeflex@3.2.1/primeflex.min.css" />
+      <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <script src="https://unpkg.com/react-transition-group@4.4.2/dist/react-transition-group.js"></script>
+      <script src="https://unpkg.com/primereact/core/core.min.js"></script>
+      <script src="https://unpkg.com/primereact/slider/slider.min.js"></script>
     </NextHead>
   )
 }
