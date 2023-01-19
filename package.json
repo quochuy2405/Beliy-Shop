@@ -36,6 +36,10 @@
     "tailwindcss": "^3.2.4",
     "typescript": "*"
   },
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
+  },
   "name": "BeliyShop",
   "version": "1.0.0",
   "main": "index.js",

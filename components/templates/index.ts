@@ -1,1 +1,1 @@
-export const demo = ''
+export { default as Home } from './Home'
