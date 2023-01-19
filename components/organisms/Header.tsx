@@ -55,28 +55,28 @@ const Header: React.FC = () => {
                 'border-b-2 border-gray-800': router.pathname == '/products'
               })}
             >
-              <Link href="#">Sản phẩm</Link>
+              <Link href="/products">Sản phẩm</Link>
             </li>
             <li
               className={clsx({
-                'border-b-2 border-gray-800': router.pathname == '/collection'
+                'border-b-2 border-gray-800': router.pathname == '/collections'
               })}
             >
-              <Link href="#">Bộ sưu tập</Link>
+              <Link href="/collections">Bộ sưu tập</Link>
             </li>
             <li
               className={clsx({
-                'border-b-2 border-gray-800': router.pathname == '/store'
+                'border-b-2 border-gray-800': router.pathname == '/stores'
               })}
             >
-              <Link href="#">Cửa hàng</Link>
+              <Link href="/stores">Cửa hàng</Link>
             </li>
             <li
               className={clsx({
                 'border-b-2 border-gray-800': router.pathname == '/about'
               })}
             >
-              <Link href="#">Về chúng tôi</Link>
+              <Link href="/about">Về chúng tôi</Link>
             </li>
           </div>
         </ul>

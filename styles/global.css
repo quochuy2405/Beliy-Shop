@@ -6,3 +6,12 @@
   font-size: 0.95rem;
   color: #313030;
 }
+.p-carousel-indicator.p-highlight button {
+  background-color: #f91f1f !important;
+  border-radius: 100rem !important;
+  height: 5px !important;
+}
+.p-carousel-indicator button {
+  border-radius: 100rem !important;
+  height: 5px !important;
+}
