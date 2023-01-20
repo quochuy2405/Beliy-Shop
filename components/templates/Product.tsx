@@ -34,7 +34,7 @@ const Products: React.FC = () => {
         <Tree value={dataTree} className="sticky h-screen top-3 w-[240px] mt-8" />
         <div className="flex-1">
           <Title>TẤT CẢ SẢN PHẨM</Title>
-          <div className="grid grid-cols-4 gap-5 py-4 my-4">
+          <div className="flex gap-2 flex-wrap py-5">
             {[...Array(10)].map((_, index) => (
               <Product key={index} />
             ))}

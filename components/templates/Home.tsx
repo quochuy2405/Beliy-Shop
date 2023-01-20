@@ -25,7 +25,11 @@ const responsiveOptions = [
 
 const Home: React.FC = () => {
   const itemTemplate = () => {
-    return <Product />
+    return (
+      <div className="pl-2">
+        <Product />
+      </div>
+    )
   }
   const sliderHome = () => {
     return (
@@ -57,12 +61,12 @@ const Home: React.FC = () => {
         autoplayInterval={4000}
         itemTemplate={itemTemplate}
         numVisible={4}
-        numScroll={4}
+        numScroll={1}
         responsiveOptions={responsiveOptions}
       />
       <div className="mt-5">
         <Title>SẢN PHẨM NỔI BẬT</Title>
-        <div className="grid grid-cols-4 gap-5 py-4">
+        <div className="flex gap-5 flex-wrap py-4">
           {[...Array(10)].map((_, index) => (
             <Product key={index} />
           ))}
@@ -70,7 +74,7 @@ const Home: React.FC = () => {
       </div>
       <div className="mt-5">
         <Title>ÁO HOODIE - HOODIE JACKET</Title>
-        <div className="grid grid-cols-4 gap-5 py-4">
+        <div className="flex gap-5 flex-wrap py-4">
           {[...Array(10)].map((_, index) => (
             <Product key={index} />
           ))}
