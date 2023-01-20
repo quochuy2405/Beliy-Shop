@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Carousel } from 'primereact/carousel'
 import React from 'react'
 import Title from '../atoms/Title'
-import { Container, Product } from '../molecules'
+import { Container, GGMap, Product } from '../molecules'
 
 const responsiveOptions = [
   {
@@ -27,16 +27,29 @@ const Home: React.FC = () => {
   const itemTemplate = () => {
     return <Product />
   }
-  return (
-    <Container>
+  const sliderHome = () => {
+    return (
       <Image
         src={slider}
         alt="shop"
         width={1000}
         height={800}
-        className="w-full h-[40vh] object-cover"
+        className="w-full h-[40vh] object-cover rounded-sm"
         loading="eager"
         placeholder="blur"
+      />
+    )
+  }
+  return (
+    <Container>
+      <Carousel
+        className="mt-5"
+        value={[1, 2, 3, 4]}
+        showIndicators={false}
+        showNavigators={false}
+        autoplayInterval={5000}
+        itemTemplate={sliderHome}
+        responsiveOptions={responsiveOptions}
       />
       <Carousel
         className="mt-5"
@@ -63,6 +76,7 @@ const Home: React.FC = () => {
           ))}
         </div>
       </div>
+      <GGMap />
     </Container>
   )
 }

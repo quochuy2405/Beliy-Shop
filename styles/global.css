@@ -1,10 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import '@/styles/molecules/product.css';
 * {
   font-family: 'Oswald', sans-serif;
-  font-size: 0.95rem;
-  color: #313030;
 }
 .p-carousel-indicator.p-highlight button {
   background-color: #f91f1f !important;
@@ -14,4 +13,42 @@
 .p-carousel-indicator button {
   border-radius: 100rem !important;
   height: 5px !important;
+}
+.p-galleria-thumbnail-container {
+  background-color: white !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 80vh !important;
+}
+.p-galleria-thumbnail-container .p-galleria-thumbnail-items-container {
+  height: 100% !important;
+}
+.p-galleria-content {
+  gap: 20px;
+}
+
+.p-galleria-content .p-galleria-item-wrapper {
+  flex: 1 !important;
+}
+.p-galleria-item-container {
+  width: 90% !important;
+}
+
+p,
+h1,
+h3 {
+  font-size: 0.95rem;
+  color: #313030;
+}
+
+.p-galleria-thumbnail-container
+  .p-galleria-thumbnail-items-container
+  .p-galleria-thumbnail-item-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.p-galleria-thumbnail-container
+  .p-galleria-thumbnail-items-container
+  .p-galleria-thumbnail-item-content::-webkit-scrollbar {
+  display: none;
 }

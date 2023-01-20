@@ -6,10 +6,21 @@ import { Tree } from 'primereact/tree'
 import React from 'react'
 import Title from '../atoms/Title'
 import { Container, Product } from '../molecules'
+import BreadCrumb, { BreadCrumbItem } from '../molecules/Breadcrumb'
 
+const breadcrumbs: Array<BreadCrumbItem> = [
+  {
+    label: 'Trang chủ',
+    url: '/'
+  },
+  {
+    label: 'Tất cả sản phẩm'
+  }
+]
 const Products: React.FC = () => {
   return (
     <Container>
+      <BreadCrumb items={breadcrumbs} />
       <Image
         src={slider}
         alt="shop"
@@ -19,7 +30,6 @@ const Products: React.FC = () => {
         loading="eager"
         placeholder="blur"
       />
-
       <div className="w-full flex my-3 gap-4">
         <Tree value={dataTree} className="sticky h-screen top-3 w-[240px] mt-8" />
         <div className="flex-1">

@@ -3,10 +3,21 @@ import React from 'react'
 import Title from '../atoms/Title'
 import { Collection, Container } from '../molecules'
 import slider from '@/pages/public/slider.png'
+import BreadCrumb, { BreadCrumbItem } from '../molecules/Breadcrumb'
 
+const breadcrumbs: Array<BreadCrumbItem> = [
+  {
+    label: 'Trang chủ',
+    url: '/'
+  },
+  {
+    label: 'Bộ sưu tập'
+  }
+]
 const Collections: React.FC = () => {
   return (
     <Container>
+      <BreadCrumb items={breadcrumbs} />
       <Image
         src={slider}
         alt="shop"

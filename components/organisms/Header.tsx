@@ -8,6 +8,7 @@ import { BsFacebook, BsInstagram } from 'react-icons/bs'
 import { FaTiktok } from 'react-icons/fa'
 import { FiPhone, FiShoppingCart } from 'react-icons/fi'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
+import { Badge } from 'primereact/badge'
 const Header: React.FC = () => {
   const router = useRouter()
   return (
@@ -80,13 +81,15 @@ const Header: React.FC = () => {
             </li>
           </div>
         </ul>
-        <div className="flex gap-1 items-center pt-5">
-          <div className="h-4">
-            <FiShoppingCart size={18} />
+        <Link href="/cart">
+          <div className="flex gap-3 items-center pt-5">
+            <div className="h-4 relative">
+              <FiShoppingCart size={18} />
+              <Badge value="2" size="normal" className="absolute -top-4 -right-3 p-badge-danger" />
+            </div>
+            <p> Giỏ hàng</p>
           </div>
-
-          <Link href="#">Giỏ hàng</Link>
-        </div>
+        </Link>
       </div>
     </header>
   )

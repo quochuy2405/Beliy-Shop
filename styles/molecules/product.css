@@ -1,0 +1,6 @@
+.box-product:hover div.view-product {
+  display: flex !important;
+  cursor: pointer;
+  transition: all ease-in 0.3s;
+  opacity: 1 !important;
+}

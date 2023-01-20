@@ -1,3 +1,5 @@
 export { default as Container } from './Container'
 export { default as Product } from './Product'
 export { default as Collection } from './Collection'
+export { default as GGMap } from './GGMap'
+export { default as BreadCrumb } from './Breadcrumb'
