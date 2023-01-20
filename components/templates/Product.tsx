@@ -34,11 +34,13 @@ const Products: React.FC = () => {
         <Tree value={dataTree} className="sticky h-screen top-3 w-[240px] mt-8" />
         <div className="flex-1">
           <Title>TẤT CẢ SẢN PHẨM</Title>
-          <div className="flex gap-2 flex-wrap py-5">
+
+          <div className="grid grid-cols-fluid justify-between py-5">
             {[...Array(10)].map((_, index) => (
               <Product key={index} />
             ))}
           </div>
+
           <Paginator first={1} rows={10} totalRecords={120} rowsPerPageOptions={[10, 20, 30]} />
         </div>
       </div>

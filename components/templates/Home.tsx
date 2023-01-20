@@ -5,28 +5,10 @@ import React from 'react'
 import Title from '../atoms/Title'
 import { Container, GGMap, Product } from '../molecules'
 
-const responsiveOptions = [
-  {
-    breakpoint: '1024px',
-    numVisible: 3,
-    numScroll: 3
-  },
-  {
-    breakpoint: '768px',
-    numVisible: 2,
-    numScroll: 2
-  },
-  {
-    breakpoint: '560px',
-    numVisible: 1,
-    numScroll: 1
-  }
-]
-
 const Home: React.FC = () => {
   const itemTemplate = () => {
     return (
-      <div className="pl-2">
+      <div className="w-[230px] mx-1">
         <Product />
       </div>
     )
@@ -53,20 +35,18 @@ const Home: React.FC = () => {
         showNavigators={false}
         autoplayInterval={5000}
         itemTemplate={sliderHome}
-        responsiveOptions={responsiveOptions}
       />
       <Carousel
-        className="mt-5"
+        className="mt-5 md:w-[100%]"
         value={[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]}
         autoplayInterval={4000}
         itemTemplate={itemTemplate}
-        numVisible={4}
+        numVisible={3}
         numScroll={1}
-        responsiveOptions={responsiveOptions}
       />
       <div className="mt-5">
         <Title>SẢN PHẨM NỔI BẬT</Title>
-        <div className="flex gap-5 flex-wrap py-4">
+        <div className="grid grid-cols-fluid-230 justify-between gap-5 py-4">
           {[...Array(10)].map((_, index) => (
             <Product key={index} />
           ))}
@@ -74,7 +54,7 @@ const Home: React.FC = () => {
       </div>
       <div className="mt-5">
         <Title>ÁO HOODIE - HOODIE JACKET</Title>
-        <div className="flex gap-5 flex-wrap py-4">
+        <div className="grid grid-cols-fluid-230 justify-between gap-5 py-4">
           {[...Array(10)].map((_, index) => (
             <Product key={index} />
           ))}

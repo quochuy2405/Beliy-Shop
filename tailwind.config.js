@@ -7,7 +7,12 @@ module.exports = {
     './providers/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      gridTemplateColumns: {
+        'fluid': 'repeat(auto-fit, 220px)',
+        'fluid-230': 'repeat(auto-fit, 230px)',
+      }
+    }
   },
   plugins: [require('tailwindcss'), require('autoprefixer')]
 }
