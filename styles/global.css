@@ -52,3 +52,10 @@ h3 {
   .p-galleria-thumbnail-item-content::-webkit-scrollbar {
   display: none;
 }
+.carousel div {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel div::-webkit-scrollbar {
+  display: none;
+}

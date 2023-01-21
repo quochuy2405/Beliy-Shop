@@ -1,15 +1,15 @@
 import slider from '@/pages/public/slider.png'
 import Image from 'next/image'
-import { Carousel } from 'primereact/carousel'
 import React from 'react'
 import Title from '../atoms/Title'
-import { Container, GGMap, Product } from '../molecules'
+import { Carousel, Container, GGMap, Product } from '../molecules'
 
 const Home: React.FC = () => {
-  const itemTemplate = () => {
+  const itemTemplate = (value) => {
     return (
-      <div>
+      <div className="w-fit">
         <Product />
+        <p>{value}</p>
       </div>
     )
   }
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         alt="shop"
         width={1000}
         height={800}
-        className="w-full h-[40vh] object-cover rounded-sm"
+        className="w-full h-full object-cover rounded-sm"
         loading="eager"
         placeholder="blur"
       />
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
       />
       <Carousel
         className="mt-5 md:w-[100%]"
-        value={[1, 2, 3, 4, 1, 2, 3]}
+        value={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
         autoplayInterval={4000}
         itemTemplate={itemTemplate}
         numVisible={4}
