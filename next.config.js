@@ -6,7 +6,7 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
   experimental: {
-    nextScriptWorkers: true,
+    nextScriptWorkers: true
   },
   images: {
     remotePatterns: [

@@ -1,16 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
-import marker from '@/features/slices/predictions/marker'
 import user from '@/features/slices/auth/login'
-import movingAverage from '@/features/slices/predictions/movingAverage'
-import predicting from '@/features/slices/predictions/predicting'
-import timer from '@/features/slices/predictions/timer'
+import { configureStore } from '@reduxjs/toolkit'
 const store = configureStore({
   reducer: {
-    user,
-    timer,
-    predicting,
-    marker,
-    movingAverage
+    user
   }
 })
 
