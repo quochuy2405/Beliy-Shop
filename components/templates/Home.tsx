@@ -1,8 +1,9 @@
 import slider from '@/pages/public/slider.png'
 import Image from 'next/image'
+import { Carousel } from 'primereact/carousel'
 import React from 'react'
 import Title from '../atoms/Title'
-import { Carousel, Container, GGMap, Product } from '../molecules'
+import { Container, GGMap, Product } from '../molecules'
 
 const Home: React.FC = () => {
   const itemTemplate = () => {
