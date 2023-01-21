@@ -8,7 +8,7 @@ import { Container, GGMap, Product } from '../molecules'
 const Home: React.FC = () => {
   const itemTemplate = () => {
     return (
-      <div className="w-[230px] mx-1">
+      <div>
         <Product />
       </div>
     )
@@ -38,10 +38,10 @@ const Home: React.FC = () => {
       />
       <Carousel
         className="mt-5 md:w-[100%]"
-        value={[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]}
+        value={[1, 2, 3, 4, 1, 2, 3]}
         autoplayInterval={4000}
         itemTemplate={itemTemplate}
-        numVisible={3}
+        numVisible={4}
         numScroll={1}
       />
       <div className="mt-5">

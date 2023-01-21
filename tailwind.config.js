@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'fluid': 'repeat(auto-fit, 220px)',
-        'fluid-230': 'repeat(auto-fit, 230px)',
+        fluid: 'repeat(auto-fit, 220px)',
+        'fluid-230': 'repeat(auto-fit, 230px)'
       }
     }
   },
