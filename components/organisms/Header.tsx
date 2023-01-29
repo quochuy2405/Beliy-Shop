@@ -21,11 +21,11 @@ const Header: React.FC = () => {
     setVisible(false)
   }
   return (
-    <header className={clsx('flex flex-col h-fit backdrop:blur-sm shadow-md px-5 py-3 mb-10')}>
+    <header className={clsx('flex flex-col h-fit backdrop:blur-sm shadow-md py-3 mb-10')}>
       <div
         className={clsx({
           'lg:flex lg:w-[80%]': 'laptop',
-          // 'sm:hidden': 'mobile',
+          'sm:px-5': 'mobile',
           'md:flex md:w-[95%]': 'ipad',
           'hidden mb-2 gap-1 justify-between w-[80%] mx-auto': 'any'
         })}
@@ -127,7 +127,15 @@ const Header: React.FC = () => {
                   className="absolute -top-4 -right-3 p-badge-danger"
                 />
               </div>
-              <p> Giỏ hàng</p>
+              <p
+                className={clsx({
+                  'sm:block': 'mobile',
+                  hidden: 'any'
+                })}
+              >
+                {' '}
+                Giỏ hàng
+              </p>
             </div>
           </Link>
           <div
