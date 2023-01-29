@@ -1,4 +1,5 @@
 import slider from '@/pages/public/slider.png'
+import clsx from 'clsx'
 import Image from 'next/image'
 import React from 'react'
 import Title from '../atoms/Title'
@@ -7,7 +8,7 @@ import { Carousel, Container, GGMap, Product } from '../molecules'
 const Home: React.FC = () => {
   const itemTemplate = (value) => {
     return (
-      <div className="w-fit">
+      <div className="w-fit mx-auto">
         <Product />
         <p>{value}</p>
       </div>
@@ -46,7 +47,11 @@ const Home: React.FC = () => {
       />
       <div className="mt-5">
         <Title>SẢN PHẨM NỔI BẬT</Title>
-        <div className="grid grid-cols-fluid-230 justify-between gap-5 py-4">
+        <div
+          className={clsx('grid grid-cols-fluid-230 justify-center gap-5 py-4', {
+            'sm:justify-between': 'mobile'
+          })}
+        >
           {[...Array(10)].map((_, index) => (
             <Product key={index} />
           ))}
@@ -54,7 +59,11 @@ const Home: React.FC = () => {
       </div>
       <div className="mt-5">
         <Title>ÁO HOODIE - HOODIE JACKET</Title>
-        <div className="grid grid-cols-fluid-230 justify-between gap-5 py-4">
+        <div
+          className={clsx('grid grid-cols-fluid-230 justify-center gap-5 py-4', {
+            'sm:justify-between': 'mobile'
+          })}
+        >
           {[...Array(10)].map((_, index) => (
             <Product key={index} />
           ))}

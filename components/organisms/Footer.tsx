@@ -5,10 +5,20 @@ import { GoPrimitiveDot } from 'react-icons/go'
 import Link from 'next/link'
 import { InputText } from 'primereact/inputtext'
 import { Button } from 'primereact/button'
+import clsx from 'clsx'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-10 h-fit min-h-[40vh] flex justify-between gap-3 border-t-[3px] border-[#6A1212] w-[80%] mx-auto pt-6 font-semibold text-sm">
+    <footer
+      className={clsx(
+        'mt-10 h-fit min-h-[40vh] border-t-[3px] border-[#6A1212] w-[80%] mx-auto pt-6 font-semibold text-sm pb-5',
+        {
+          'md:flex md:flex-row md:justify-between md:gap-3': 'ipad',
+          'sm:flex sm:flex-col': 'mobile',
+          'flex flex-col': 'any'
+        }
+      )}
+    >
       <div className="flex-1">
         <div className="w-32 relative">
           <Image src={Logo} alt="BeliyShop" />
@@ -56,15 +66,28 @@ const Footer: React.FC = () => {
         <h2>ĐĂNG KÝ NHẬN TIN</h2>
         <div className="mt-4 flex flex-col gap-3">
           <p>Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và nhiều hơn nữa</p>
-          <div className="flex">
+          <div
+            className={clsx('flex flex-col', {
+              'md:flex md:flex-row': 'ipad',
+              'sm:flex sm:flex-row': 'mobile'
+            })}
+          >
             <InputText
               type="text"
-              className="p-inputtext-sm block mb-2 rounded-none h-11 w-64"
+              className={clsx({
+                'p-inputtext-sm block mb-2 rounded-none h-11 w-full': 'any',
+                'md:w-64': 'ipad',
+                'sm:w-64': 'mobile'
+              })}
               placeholder="Email"
             />
 
             <Button
-              className="p-button-success p-button-sm rounded-none h-11 p-button-outlined ml-1 w-36"
+              className={clsx({
+                'md:ml-1 md:!w-36': 'ipad',
+                'sm:ml-1 sm:!w-36': 'mobile',
+                'p-button-success p-button-sm rounded-none h-11 p-button-outlined w-full': 'any'
+              })}
               label="ĐĂNG KÝ"
             />
           </div>
