@@ -1,0 +1,24 @@
+{
+  "headers": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "beliy.com"
+        },
+        {
+          "type": "host",
+          "value": "beliy"
+        }
+      ],
+
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ]
+}

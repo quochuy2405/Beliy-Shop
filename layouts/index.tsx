@@ -9,7 +9,7 @@ type Props = {
   title?: string
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, title = 'Beliy Store' }: Props) => (
   <Fragment>
     <Meta title={title} description="" />
     <Script src="https://unpkg.com/react/umd/react.production.min.js" />
