@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
@@ -35,6 +36,8 @@
     "eslint-plugin-react": "^7.31.11",
     "husky": "^8.0.3",
     "lint": "^0.8.19",
+    "next-seo": "^5.15.0",
+    "next-sitemap": "^3.1.52",
     "postcss-preset-env": "^7.8.3",
     "prettier": "^2.8.2",
     "react-icons": "^4.7.1",

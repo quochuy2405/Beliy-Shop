@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://beliy-shop.vercel.app/
+
+# Sitemaps
+Sitemap: https://beliy-shop.vercel.app/sitemap.xml

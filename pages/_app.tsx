@@ -1,5 +1,7 @@
 import React, { Fragment, ReactElement, ReactNode } from 'react'
 import { AppProps } from 'next/app'
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next-seo.config'
 
 import '@/styles/global.css'
 import { NextPage } from 'next'
@@ -14,7 +16,12 @@ type AppPropsWithLayouts = AppProps & {
 
 function App({ Component, pageProps }: AppPropsWithLayouts) {
   const getLayout = Component.getLayout || ((page: any) => page)
-  const layouts = getLayout(<Component {...pageProps} />)
+  const layouts = getLayout(
+    <>
+      <DefaultSeo {...SEO} />
+      <Component {...pageProps} />
+    </>
+  )
 
   return <Fragment>{layouts}</Fragment>
 }
